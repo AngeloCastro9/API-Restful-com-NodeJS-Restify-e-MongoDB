@@ -2,14 +2,10 @@ const fatorial = require('./fatorial')
 
 console.log('n-fatorial')
 
-/*console.log(`Executando o script a partir do diretório ${process.cwd()}`)
+const argv = require('yargs').demandOption('num').argv
 
-process.on('exit', ()=>{
-  console.log('script está prestes a terminar')
-})*/
-
-
-
-const num = parseInt(process.argv[2])
+const num = argv.num
 
 console.log(`O fatorial de ${num} é igual a ${fatorial(num)}`)
+
+//console.log(module.paths)
